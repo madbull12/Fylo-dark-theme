@@ -1,0 +1,29 @@
+$colors: (
+    darkBlue-intro:  hsl(217, 28%, 15%),
+    darkBlue-main: hsl(218, 28%, 13%),
+    darkBlue-footer:  hsl(216, 53%, 9%),
+    darkBlue-testi:hsl(219, 30%, 18%)
+
+);
+
+$accents: (
+    cyan:hsl(176, 68%, 64%),
+    blue:hsl(198, 60%, 50%),
+    red:hsl(0, 100%, 63%)
+);
+
+@each $name, $color in $colors {
+    .primary-#{$name} {
+        background-color:$color;
+    }
+}
+@each $name, $accent in $accents {
+    .accent-#{$name} {
+        background-color:$accent;
+    }
+    .clr-accent-#{$name} {
+        color:$accent;
+    }
+}
+
+$white:hsl(0, 0%, 100%);

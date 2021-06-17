@@ -1,0 +1,68 @@
+@import '../layout/media-queries';
+
+.early-access {
+    padding: 5rem 0;
+
+    &__content {
+      display: flex;
+      justify-content:center;
+      color: $white;
+      width: 50%;
+      margin: 0 auto;
+      border-radius:10px;
+      box-shadow: 7px 8px 9px -2px rgba(0,0,0,0.41);
+      margin-bottom: -10rem;
+      z-index: 10;
+      position: relative;
+      @include maxWidth(768px) {
+       width:75%;
+        
+    }
+      .card {
+          padding:3rem;
+          text-align: center;
+          
+          h1 {
+              font-size:2rem;
+              margin-bottom:.75rem;
+          }
+          .email-section{
+              display: flex;
+              margin: 2rem auto 0 auto;
+              align-items: center;
+              @include maxWidth(768px) {
+                  flex-direction: column;
+                  
+              }
+              input {
+                  width: 80%;
+                  outline: none;
+                  border-radius: 50px;
+                  padding:.75rem 1.5rem;
+                  margin-right: 1rem;
+                  border: none;
+                  @include maxWidth(768px){
+                      margin: auto;
+                      min-width: 100%;
+                      padding:.5rem 1rem;
+                  }
+              }
+              .btn {
+                // align-self: center;
+                cursor: pointer;
+                border:none;
+                @include maxWidth(768px){
+                    font-size:.75rem;
+                    min-width: 100%;
+                    margin-top: 1rem;
+                }
+              }
+          }
+          .error-msg {
+              text-align:start;
+             padding-left: .75rem;
+          
+          }
+      }
+    }
+}

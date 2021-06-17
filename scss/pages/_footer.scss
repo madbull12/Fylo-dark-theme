@@ -1,0 +1,89 @@
+@import '../layout/grid';
+@import '../layout/media-queries';
+
+.footer {
+    padding:5rem 2rem;
+    color: $white;
+    &__content {
+        margin-top:3rem;
+
+        .logo {
+      
+            img {
+                width:100px;
+                @include maxWidth(768px) {
+                    width:200px;
+                }
+            }
+        }
+        &--body {
+            margin-top:2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap:2rem;
+            @include maxWidth(768px) {
+                grid-template-columns:1fr;
+            }
+            .location {
+                display: flex;
+                .icon {
+                    object-fit: contain;
+                    align-self: start;
+                    padding-top: .5rem;
+                    margin-right: 1rem;
+                }
+            }
+
+            .contact-info {
+                p{
+                    margin-left: 1rem;
+                }
+                .telp {
+                    display: flex;
+                    margin-bottom: 1rem;
+                }
+                .email {
+                    display: flex;
+                }
+            }
+            .social-medias {
+                display:flex;
+                @include maxWidth(768px) {
+                    justify-content: center;
+                }
+                i {
+                    margin:0 .5rem;
+                    color:$white;
+                    border:1px solid $white;
+                    border-radius: 50%;
+                   width: 40px;
+                   height: 40px;
+                   display: flex;
+                   align-items: center;
+                   justify-content:center;
+                   transition: all .3s ease;
+                   &:hover {
+                        color:hsl(176, 68%, 64%);
+                        border-color: hsl(176, 68%, 64%);
+                   }
+                }
+            }
+            ul {
+                .title {
+                    margin-bottom: .75rem;
+                }
+                li {
+                    a {
+                        color:$white;
+                        &:hover {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+         
+        }
+    }   
+
+
+}

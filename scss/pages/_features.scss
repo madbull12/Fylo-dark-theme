@@ -1,0 +1,39 @@
+@import '../layout/grid';
+@import '../layout/media-queries';
+
+
+.features {
+   
+    padding: 2rem;
+    text-align: center;
+    @include maxWidth(768px) {
+       padding: 1rem;
+    }
+    &__content {
+        color:$white;
+        margin: auto;
+        @include gridRepeat(2);
+        @include maxWidth(768px) {
+            @include gridRepeat(1);
+            gap:3rem;
+        }
+        .box {
+            width:75%;
+            justify-self: center;
+            .icon {
+                img {
+                    width:91px;
+                    height: 64px;
+                    object-fit: contain;
+                }
+            }
+            .text {
+                @include maxWidth(768px) {
+                   h2 {
+                       margin:1rem 0;
+                   }
+                }
+            }
+        }
+    }
+}

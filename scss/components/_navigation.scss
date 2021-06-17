@@ -1,0 +1,55 @@
+@import '../layout/media-queries';
+
+.navigation {
+    padding:2rem;
+    font-family: 'Raleway', sans-serif;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    .logo {
+        @include maxWidth(768px) {
+            width:100px;
+            @include maxWidth(500px) {
+                width:60px;
+            }
+        }
+    }
+    ul {
+        li {
+            display: inline-block;
+            a {
+                color: hsl(0, 0%, 100%);
+                margin:0 1.5rem;
+                position: relative;
+                @include maxWidth(768px) {
+                    margin:0 1rem;
+                   
+                }
+                @include maxWidth(500px) {
+                    margin:0 .5rem;
+                    font-size: .75rem;
+                }
+                @include maxWidth(300px) {
+                    margin:0 .25rem;
+                    font-size: .5rem;
+                }
+                &:hover {
+                    font-weight: 700;
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width:0;
+                    height: 1px;
+                    background: white;
+                    bottom:0;
+                    right: 0;
+                }
+                &:hover::before {
+                    width:100%;
+                }
+            }
+        }
+        
+    }
+}

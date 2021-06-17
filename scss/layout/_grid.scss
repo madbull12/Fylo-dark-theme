@@ -1,0 +1,5 @@
+@mixin gridRepeat($times) {
+    display: grid;
+    grid-template-columns: repeat($times,1fr);
+    gap:3rem;
+}
